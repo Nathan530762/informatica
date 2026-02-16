@@ -1,0 +1,122 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenção de Computadores - Ouro Branco</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; color:#333; }
+    header { background: linear-gradient(90deg,#2563eb,#4f46e5); color:white; padding:60px 20px; text-align:center; }
+    h1 { font-size:40px; margin-bottom:10px; }
+    .btn { display:inline-block; padding:15px 25px; border-radius:12px; text-decoration:none; font-weight:bold; }
+    .btn-whatsapp { background:#25D366; color:white; }
+    section { padding:60px 20px; text-align:center; }
+    .container { max-width:1100px; margin:auto; }
+    .grid { display:grid; gap:30px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
+    .card { background:white; padding:30px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    .price { font-size:32px; font-weight:bold; margin:15px 0; }
+    .promo { background:#dc2626; color:white; }
+    .badge { background:#2563eb; color:white; padding:5px 12px; border-radius:20px; font-size:12px; }
+    .countdown { font-size:32px; margin:20px 0; font-weight:bold; }
+    footer { background:#111; color:white; padding:20px; }
+    .gallery img { width:100%; height:250px; object-fit:cover; border-radius:16px; box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+    .floating { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:18px; border-radius:50%; font-size:24px; text-decoration:none; box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Seu Computador Está Lento?</h1>
+  <p>Nós cuidamos disso pra você! Atendimento rápido em Ouro Branco.</p>
+  <a class="btn btn-whatsapp" href="https://wa.me/553195029814?text=Olá,%20quero%20orçamento" target="_blank">Falar no WhatsApp</a>
+</header>
+
+<section class="promo">
+  <div class="container">
+    <h2>🔥 PROMOÇÃO POR TEMPO LIMITADO 🔥</h2>
+    <p>Formatação + Backup + Drivers + Ativação Windows</p>
+    <div class="price">R$120</div>
+    <div class="countdown" id="countdown">24:00:00</div>
+    <a class="btn" style="background:white;color:#dc2626;" href="https://wa.me/553195029814?text=Quero%20a%20promoção%20de%20120" target="_blank">QUERO APROVEITAR</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Nossos Planos</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Formatação Básica</h3>
+        <div class="price">R$120</div>
+        <p>Instalação limpa + Drivers</p>
+      </div>
+      <div class="card">
+        <span class="badge">MAIS VENDIDO</span>
+        <h3>Plano Completo</h3>
+        <div class="price">R$180</div>
+        <p>Formatação + Backup + Vírus</p>
+      </div>
+      <div class="card">
+        <h3>Manutenção Premium</h3>
+        <div class="price">R$250</div>
+        <p>Limpeza interna + Upgrade</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eee;">
+  <div class="container">
+    <h2>Trabalhos Realizados</h2>
+    <div class="grid grid-3 gallery">
+      <img src="trabalho1.jpg" alt="Manutenção">
+      <img src="trabalho2.jpg" alt="Montagem">
+      <img src="trabalho3.jpg" alt="Teste Técnico">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Depoimentos</h2>
+    <div class="grid grid-3">
+      <div class="card">"Meu PC ficou super rápido!"<br><strong>- Carlos</strong></div>
+      <div class="card">"Atendimento rápido e profissional."<br><strong>- Juliana</strong></div>
+      <div class="card">"Resolveu meu problema de vírus."<br><strong>- Marcos</strong></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Manutenção de Computadores - Ouro Branco
+</footer>
+
+<a class="floating" href="https://wa.me/553195029814?text=Olá,%20preciso%20de%20manutenção" target="_blank">💬</a>
+
+<script>
+  let time = 24 * 60 * 60;
+  const countdown = document.getElementById('countdown');
+
+  setInterval(() => {
+    let hours = Math.floor(time / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = time % 60;
+
+    countdown.innerHTML = 
+      String(hours).padStart(2,'0') + ':' +
+      String(minutes).padStart(2,'0') + ':' +
+      String(seconds).padStart(2,'0');
+
+    if(time > 0) time--;
+  },1000);
+</script>
+
+</body>
+</html>
+trabalho1.jpg
+
+trabalho2.jpg
+
+trabalho3.jpg
